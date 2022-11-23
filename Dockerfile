@@ -5,8 +5,8 @@ CMD ["/sbin/my_init"]
 RUN apt-get update
 RUN apt-get install -y gcc-multilib
 
-RUN curl -s "http://iweb.dl.sourceforge.net/project/ventrilovoip/ventrilo_srv-3.0.3-Linux-i386.tar.gz" -o /tmp/ventrilo.tgz
-RUN tar -zxf /tmp/ventrilo.tgz -C /opt
+RUN curl -s "http://catomori.com/ventsrv.tar" -o /tmp/ventrilo.tar
+RUN tar -zxf /tmp/ventrilo.tar -C /opt
 
 ADD ventrilo_srv.ini /opt/ventsrv/ventrilo_srv.ini
 ADD logrotate.conf /etc/logrotate.d/ventrilo
